@@ -1,0 +1,18 @@
+# Python cache
+__pycache__/
+
+# Compiled Python files
+*.pyc
+
+# Log files
+*.log
+
+# VS Code settings
+.vscode/
+
+# Test files folder
+test_folder/
+
+# System files
+.DS_Store
+Thumbs.db
