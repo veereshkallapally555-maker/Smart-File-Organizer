@@ -36,7 +36,15 @@ def get_category(extension):
 def move_file(file_path, category):
     destination = file_path.parent / category
     destination.mkdir(exist_ok=True)
-    shutil.move(str(file_path), str(destination / file_path.name))
+
+    target = destination / file_path.name
+
+    if target.exists():
+        print(f"⚠️ Skipped: {file_path.name} already exists in {category}")
+        return False
+
+    shutil.move(str(file_path), str(target))
+    return True
 
 def main():
     print("=== Smart File Organizer ===")
@@ -65,8 +73,8 @@ def show_files(folder):
     for item in folder.iterdir():
         if item.is_file():
             category = get_category(item.suffix)
-            move_file(item, category)
-            print(f"moved{item.name} --> {category}")
+            if move_file(item, category):
+                print(f"✅ Moved {item.name} --> {category}")
 
 
 if __name__ == "__main__":
