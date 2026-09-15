@@ -50,12 +50,13 @@ def main():
     show_files(folder)
 
 def get_folder_path():
-    folder = input("Enter folder path: ")
+    folder = input("Enter folder path: ").strip()
     path = Path(folder)
-    if path.exists():
+
+    if path.exists() and path.is_dir():
         return path
-    
-    print("folder does not exist")
+
+    print("❌ Folder does not exist or the path is not a directory.")
     return None
 
 def show_files(folder):
