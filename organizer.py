@@ -68,13 +68,28 @@ def get_folder_path():
     return None
 
 def show_files(folder):
-    print("\n Files Found \n")
+    print("\n=== Files Found ===\n")
+
+    counts = {}
 
     for item in folder.iterdir():
         if item.is_file():
             category = get_category(item.suffix)
+
             if move_file(item, category):
                 print(f"✅ Moved {item.name} --> {category}")
+                counts[category] = counts.get(category, 0) + 1
+
+    print("\n=== Organization Summary ===")
+
+    if not counts:
+        print("No files were moved.")
+        return
+
+    for category, count in counts.items():
+        print(f"📁 {category}: {count} file(s)")
+
+    print(f"\n✅ Total files moved: {sum(counts.values())}")
 
 
 if __name__ == "__main__":
