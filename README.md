@@ -46,3 +46,109 @@ Smart-File-Organizer/
 ├── README.md
 ├── .gitignore
 └── test_folder/
+```
+
+---
+
+## 🚀 How to Run
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/veereshkallapally555-maker/Smart-File-Organizer.git
+```
+
+### 2. Open the project
+
+Open the project folder in VS Code.
+
+### 3. Run the program
+
+```bash
+python organizer.py
+```
+
+### 4. Enter the folder path
+
+The program will ask for the folder you want to organize.
+
+### 5. Choose an option
+
+```text
+Choose an option:
+1. Organize files
+2. Preview changes
+```
+
+**Organize files** moves the files into their appropriate folders.
+
+**Preview changes** shows which files would be moved without actually moving them.
+
+---
+
+## 🖥️ Example
+
+```text
+=== Smart File Organizer ===
+
+Enter folder path: test_folder
+
+Folder found: test_folder
+
+Choose an option:
+1. Organize files
+2. Preview changes
+
+Enter choice (1-2): 1
+
+=== Files Found ===
+
+=== Organization Summary ===
+📁 Documents: 1 file(s)
+📁 Images: 1 file(s)
+📁 Audio: 1 file(s)
+📁 Videos: 1 file(s)
+
+✅ Total files moved: 4
+```
+
+---
+
+## 🛠️ Technologies Used
+
+- Python 3
+- pathlib
+- shutil
+
+---
+
+## 📚 Concepts Demonstrated
+
+- Functions
+- Dictionaries
+- Loops
+- Conditional statements
+- File handling
+- Path manipulation
+- File organization automation
+- Git
+- GitHub
+
+---
+
+## 🔮 Future Improvements
+
+- GUI version
+- Logging
+- Progress bar
+- Configuration file
+- Unit tests
+
+---
+
+## 👨‍💻 Author
+
+**Veeresh Kallapally**
+
+- GitHub: [@veereshkallapally555-maker](https://github.com/veereshkallapally555-maker)
+- LinkedIn: [Veeresh Kallapally](https://www.linkedin.com/in/veeresh-kallapally-a87164390/)
